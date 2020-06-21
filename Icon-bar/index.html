@@ -31,10 +31,35 @@
       .active {
         background-color: green;
       }
+
+      .icon-bar-hr {
+        width: 100%;
+        background-color: black;
+        overflow: auto;
+      }
+      .icon-bar-hr a {
+        box-sizing: border-box;
+        width: 20%;
+        float: left;
+        padding: 15px;
+        text-align: center;
+      }
+      .icon-bar-hr a:hover {
+        background-color: #808080;
+      }
     </style>
   </head>
   <body>
     <div class="icon-bar">
+      <a class="active" href="#"><i class="fa fa-home"></i></a>
+      <a href="#"><i class="fa fa-search"></i></a>
+      <a href="#"><i class="fa fa-envelope"></i></a>
+      <a href="#"><i class="fa fa-globe"></i></a>
+      <a href="#"><i class="fa fa-trash"></i></a>
+    </div>
+    <br />
+    <!-- Horizontal icon bar -->
+    <div class="icon-bar-hr">
       <a class="active" href="#"><i class="fa fa-home"></i></a>
       <a href="#"><i class="fa fa-search"></i></a>
       <a href="#"><i class="fa fa-envelope"></i></a>
