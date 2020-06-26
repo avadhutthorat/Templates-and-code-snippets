@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search bar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        margin: 10px;
+      }
+      .navbar {
+        overflow: hidden;
+        background-color: burlywood;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 19px;
+        padding: 14px 16px;
+      }
+      .navbar a:hover {
+        background-color: aquamarine;
+      }
+      .searchbar {
+        float: right;
+        margin: 10px 10px;
+      }
+      .searchbar input[type="text"] {
+        /* padding: 6px; */
+        margin: 0 10px;
+        font-size: 17px;
+        border: none;
+      }
+      .searchbar button {
+        background-color: burlywood;
+        border: none;
+        margin: 5px 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .navbar .searchbar {
+          float: none;
+        }
+
+        .navbar a,
+        .searchbar input[type="text"] {
+          float: none;
+          display: block;
+          width: 100%;
+          text-emphasis: left;
+          padding: 5px 10px;
+          margin: 5px 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <div class="searchbar">
+        <input type="text" placeholder="Search..." />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </body>
+</html>

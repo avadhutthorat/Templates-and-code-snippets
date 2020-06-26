@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .dash {
+      margin: 5px;
+      padding: 2px;
+      background-color: black;
+      width: 25px;
+    }
+    .left {
+      height: 100%;
+      padding-top: 60px;
+      top: 0;
+      width: 0;
+      background-color: #111;
+      position: fixed;
+      z-index: 1;
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .cancel {
+        padding-top: 6px !important;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        margin-left: 30px;
+    }
+    .left a:hover {
+     color: #f1f1f1;
+    }
+    .left a {
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 30px;
+      display: block;
+      padding: 10px 20px;
+      color: #818181;
+      transition: 0.3s;
+    }
+
+    .navigation {
+        position: relative;
+        top: 40px;
+    }
+  </style>
+  <body>
+    <div class="navigation" onclick="openPane()">
+      <div class="dash"></div>
+      <div class="dash"></div>
+      <div class="dash"></div>
+    </div>
+
+    <div class="left" id='mysidenav'>
+      <a href='javascript:void(0)' class="cancel" onclick="closeNav()">&times;</button>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <script>
+      function openPane() {
+        document.getElementById('mysidenav').style.width = '250px'
+      }
+
+      function closeNav(){
+          document.getElementById('mysidenav').style.width = '0'
+      }
+    </script>
+  </body>
+</html>
